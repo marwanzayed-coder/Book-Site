@@ -8,7 +8,7 @@ const Login = (props) => {
       <form
         className="Auth-form"
         method="POST"
-        action="http://localhost:5000/login"
+        action="/login-back"
       >
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">{lang ? "Sign In" : "تسجيل دخول"}</h3>

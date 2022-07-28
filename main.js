@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 // Connect to db
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGOOSE_URL)
   .then((result) => {
     app.listen(PORT, () => {
       console.log(`http://localhost:${PORT}`);

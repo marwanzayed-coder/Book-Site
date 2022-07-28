@@ -35,11 +35,11 @@ const Footer = (props) => {
                 {lang ? "About" : "عنا"}
               </Link>
             </li> */}
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/api" className="nav-link px-2 text-muted">
                 API
               </Link>
-            </li>
+            </li> */}
           </ul>
         </footer>
       </div>

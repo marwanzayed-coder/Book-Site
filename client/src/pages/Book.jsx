@@ -5,11 +5,7 @@ const Book = (props) => {
   let { lang } = props;
   return (
     <div className="Auth-form-container">
-      <form
-        className="Auth-form"
-        method="POST"
-        action="http://localhost:5000/new_book"
-      >
+      <form className="Auth-form" method="POST" action="/new_book">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">{lang ? "New Book" : "كتاب جديد"}</h3>
           <div className="form-group mt-3">

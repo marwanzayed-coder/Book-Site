@@ -67,7 +67,7 @@ export const authController = {
       // Save User in database
       await newUser.save();
       res.cookie("user_data", newUser);
-      res.redirect("http://localhost:3000/book");
+      res.redirect("/book");
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }

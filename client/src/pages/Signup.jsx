@@ -5,11 +5,7 @@ const signup = (props) => {
   let { lang } = props;
   return (
     <div className="Auth-form-container">
-      <form
-        className="Auth-form"
-        action="http://localhost:5000/signup"
-        method="POST"
-      >
+      <form className="Auth-form" action="/signup-back" method="POST">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">{lang ? "Sign Up" : "اشتراك"}</h3>
           <div className="form-group mt-3">

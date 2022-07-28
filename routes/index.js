@@ -6,9 +6,9 @@ import {
 
 export const userRouter = express.Router();
 
-userRouter.post("/login", authController.login);
+userRouter.post("/login-back", authController.login);
 
-userRouter.post("/signup", authController.register);
+userRouter.post("/signup-back", authController.register);
 
 userRouter.post("/new_book", authController.new_book);
 
