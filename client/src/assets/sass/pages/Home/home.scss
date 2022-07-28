@@ -1,0 +1,30 @@
+// Import Variables
+@use "../../layout/variables" as *;
+
+.home {
+  .main-header {
+    display: flex;
+    justify-content: center;
+    h2 {
+      font-weight: normal;
+      font-size: 40px;
+      position: relative;
+      margin: {
+        bottom: 40px;
+        top: 40px;
+      }
+      text-transform: uppercase;
+      border-bottom: 2px solid $blueColor;
+      width: fit-content;
+    }
+  }
+  .row {
+    margin-top: 50px;
+    justify-content: center;
+    .item {
+      box-shadow: $boxShadowBlue;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+}

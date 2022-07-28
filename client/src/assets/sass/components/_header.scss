@@ -1,0 +1,95 @@
+// Import Variables
+@use "./layout/variables" as *;
+
+nav.navbar {
+  box-shadow: 0 0 10px $bg;
+  .navbar-brand {
+    color: $redColor;
+    transition: 0.3s;
+    font-size: 22px;
+    &:hover {
+      color: $redColorTwo;
+    }
+  }
+  .btn-outline-success {
+    border-color: $blueColor;
+    color: $blueColor;
+    &:hover {
+      background-color: $blueColor;
+      color: $white;
+    }
+    &:focus {
+      color: $white;
+      background-color: $blueColor;
+      border-color: $blueColor;
+      outline: 0;
+      box-shadow: $boxShadowBlue;
+    }
+  }
+  .btn-outline-primary {
+    border-color: $redColor;
+    color: $redColor;
+    &:hover {
+      background-color: $redColor;
+      color: $white;
+    }
+    &:focus {
+      color: $white;
+      background-color: $redColor;
+      border-color: $redColor;
+      outline: 0;
+      box-shadow: $boxShadowRed;
+    }
+  }
+  .btn-lang {
+    &:hover {
+      border-color: $blueColorTwo;
+    }
+    &:focus {
+      border-color: transparent;
+    }
+  }
+  .navbar-nav {
+    margin-left: auto;
+    position: relative;
+    a {
+      margin: 0 20px;
+      font-size: 18px;
+      position: relative;
+      overflow: hidden;
+      &::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: $redColor;
+        position: absolute;
+        bottom: 0;
+        left: -600px;
+        right: 0;
+        transition: 0.3s;
+      }
+      &:hover::before {
+        left: 0;
+      }
+      &.active::before {
+        left: 0;
+      }
+    }
+  }
+}
+nav.navbar[dir="rtl"] {
+  .navbar-nav {
+    a {
+      &::before {
+        left: 0px;
+        right: -600px;
+      }
+      &:hover::before {
+        right: 0;
+      }
+      &.active::before {
+        right: 0;
+      }
+    }
+  }
+}
