@@ -2,11 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "assets/sass/pages/Home/home.css";
 import Logo from "assets/images/logo.png";
+import Header from "components/Header";
+import Footer from "components/Footer";
 
 const Home = (props) => {
   let { lang, logo } = props;
   return (
     <div className="home">
+      <Header {...props} />
       <div className="container">
         <div className="px-4 my-5 text-center">
           <img
@@ -48,6 +51,7 @@ const Home = (props) => {
           </div>
         </div>
       </div>
+      <Footer {...props}></Footer>
     </div>
   );
 };

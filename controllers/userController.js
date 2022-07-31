@@ -20,10 +20,9 @@ export const get_user_details = async (req, res) => {
       .status(401)
       .json({ msg: "This Email Does not exist Please Register" });
   } else {
-    res.render("user", {
-      myTitle: "Book Site",
-      name,
-      userFound,
+    res.json({
+      name: name,
+      books: [...userFound],
     });
   }
 };
